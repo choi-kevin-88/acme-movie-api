@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize");
 const { STRING } = Sequelize;
 const conn = new Sequelize(
-  process.env.DATABASE_URL || "postgres://localhost/acme_db"
+  process.env.DATABASE_URL || "postgres://localhost/acme_movie_api"
 );
 
 const Movie = conn.define("movie", { title: STRING });
@@ -68,4 +68,4 @@ const syncAndSeed = async () => {
   return;
 };
 
-module.exports = { syncAndSeed, models: { Actor, Movie, Role } };
+module.exports = { syncAndSeed, models: { Actor, Movie, Role }, conn };

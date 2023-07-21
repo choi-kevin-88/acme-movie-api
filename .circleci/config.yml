@@ -8,7 +8,9 @@ jobs:
     docker: # to use a circle ci pre-built docker file
       - image: cimg/node:16.15.0 # name of the image to run --> note js version 16.15.0
         environment:
-          TEST_DATABASE_URL: postgresql://postgres@localhost/acme_db
+          DATABASE_URL: postgresql://postgres@localhost/acme_movie_api
+          POSTGRES_USER: postgres
+          POSTGRES_DB: acme_movie_api
           # Service container image
       - image: cimg/postgres:14.0
         environment:

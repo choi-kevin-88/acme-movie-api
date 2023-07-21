@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha './test/*.js' --exit"
+    "test": "mocha './test/*.js' --exit",
+    "seed": "node ./seed.js"
   },
   "repository": {
     "type": "git",
